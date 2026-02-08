@@ -17,8 +17,7 @@ async function sendMessage() {
 
   // 呼叫 Replit 後端 AI
   try {
-    const response = await fetch("https://nodejs-1--doomsdaypotato6
-.repl.co/chat", {
+    const response = await fetch("https://ai-idol-chat.doomsdaypotato6.repl.co/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: text, role: role, ip: userIP })
