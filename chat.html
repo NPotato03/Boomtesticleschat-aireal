@@ -2,19 +2,34 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>聊天</title>
+  <title>偶像 AI 聊天室</title>
+  <style>
+    body { font-family: Arial; background:#f2f2f2; text-align:center; }
+    .chat-container { max-width:400px; margin:auto; background:white; padding:10px; border-radius:10px; }
+    #chat-box { border:1px solid #ddd; height:300px; overflow-y:auto; margin:5px 0; padding:5px; text-align:left; }
+    .user { text-align:right; color:blue; }
+    .ai { text-align:left; color:green; }
+    input, select, button { width:100%; padding:5px; margin:5px 0; }
+  </style>
 </head>
 <body>
-  <select id="personality">
-    <option value="genki">P醬</option>
-    <option value="onepiece">C醬</option>
-    <option value="bluearchive">M啾</option>
-  </select>
+  <div class="chat-container">
+    <h2>💬 偶像 AI 聊天室</h2>
 
-  <div id="chat-box"></div>
+    <p>選擇偶像角色：</p>
+    <select id="personality">
+      <option value="genki">🅰 P醬</option>
+      <option value="onepiece">🅱 C醬</option>
+      <option value="bluearchive">🅲 M啾</option>
+    </select>
 
-  <input id="user-input">
-  <button onclick="sendMessage()">送出</button>
+    <div id="chat-box"></div>
+
+    <div class="input-area">
+      <input id="user-input" type="text" placeholder="輸入訊息…">
+      <button onclick="sendMessage()">送出</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
