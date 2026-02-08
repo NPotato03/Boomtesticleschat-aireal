@@ -1,21 +1,70 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-HK">
 <head>
-  <meta charset="UTF-8">
-  <title>聊天</title>
+  <meta charset="UTF-8" />
+  <title>AI 偶像聊天</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont;
+      background: #0f172a;
+      color: #e5e7eb;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 12px;
+      background: #020617;
+      text-align: center;
+      font-weight: bold;
+    }
+    #chat {
+      padding: 12px;
+      height: 70vh;
+      overflow-y: auto;
+    }
+    .msg {
+      margin-bottom: 10px;
+    }
+    .user {
+      color: #38bdf8;
+    }
+    .ai {
+      color: #a7f3d0;
+    }
+    footer {
+      display: flex;
+      gap: 6px;
+      padding: 10px;
+      background: #020617;
+    }
+    select, input, button {
+      font-size: 16px;
+      padding: 6px;
+    }
+    input {
+      flex: 1;
+    }
+  </style>
 </head>
 <body>
-  <select id="personality">
-    <option value="genki">P醬</option>
-    <option value="onepiece">C醬</option>
-    <option value="bluearchive">M啾</option>
+
+<header>
+  AI 偶像聊天室
+</header>
+
+<div id="chat"></div>
+
+<footer>
+  <select id="role">
+    <option value="P">P醬</option>
+    <option value="C">C醬</option>
+    <option value="M">M啾</option>
   </select>
+  <input id="text" placeholder="打字同偶像傾偈…" />
+  <button onclick="send()">送出</button>
+</footer>
 
-  <div id="chat-box"></div>
-
-  <input id="user-input">
-  <button onclick="sendMessage()">送出</button>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
