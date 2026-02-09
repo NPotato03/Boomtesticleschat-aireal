@@ -37,7 +37,7 @@ async function sendMessage() {
 
   } catch (err) {
     console.error(err);
-    box.innerHTML += `<div class="ai">AI：暫時無法連線，請稍後再試</div>`;
+    box.innerHTML += `<div class="ai">AI：屁眼</div>`;
   }
 
   // 清空輸入框
